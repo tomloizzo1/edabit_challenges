@@ -26,6 +26,7 @@ def sum_two_smallest_nums(lst):
     positive_list.sort()
     return positive_list[0] + positive_list[1]
 
+
 if __name__ == '__main__':
     test1 = [19, 5, 42, 2, 77]
     test2 = [10, 343445353, 3453445, 3453545353453]
