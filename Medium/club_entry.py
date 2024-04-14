@@ -32,9 +32,9 @@ def club_entry(word):
     :param word: keyword with a double letter
     :return: The double letter's position in the alphabet multiplied by 4
     """
-    expression = re.compile(r'(.)\1')            # Creates a search pattern finding all instance of repeating characters
-    double_letter = re.findall(expression, word) # Returns a list of all non-overlapping matches
-    return (ord(double_letter[0]) - 96) * 4      # Subtracts 96 from the unicode order to get position (LOWER CASE ONLY)
+    expression = re.compile(r'(.)\1')                # Search pattern finding all instance of repeating characters
+    double_letter = re.findall(expression, word)     # Returns a list of all non-overlapping matches
+    return (ord(double_letter[0].lower()) - 96) * 4  # Subtracts 96 from the unicode order getting position
 
 if __name__ == '__main__':
     Test(club_entry("lettuce"), 80)
